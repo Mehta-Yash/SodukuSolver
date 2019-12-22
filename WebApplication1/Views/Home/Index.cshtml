@@ -1,0 +1,279 @@
+﻿
+@{
+    ViewBag.Title = "Soduku Game";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+<head>
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <h1>Solving Soduku</h1>
+    <table>
+        <tr>
+            <td id="cell1">  </td>
+            <td id="cell2">  </td>
+            <td id="cell3">  </td>
+            <td id="cell4">  </td>
+            <td id="cell5">  </td>
+            <td id="cell6">  </td>
+            <td id="cell7">  </td>
+            <td id="cell8">  </td>
+            <td id="cell9">  </td>
+        </tr>
+        <tr>
+            <td id="cell10">  </td>
+            <td id="cell11">  </td>
+            <td id="cell12">  </td>
+            <td id="cell13">  </td>
+            <td id="cell14">  </td>
+            <td id="cell15">  </td>
+            <td id="cell16">  </td>
+            <td id="cell17">  </td>
+            <td id="cell18">  </td>
+        </tr>
+        <tr>
+            <td id="cell19">  </td>
+            <td id="cell20">  </td>
+            <td id="cell21">  </td>
+            <td id="cell22">  </td>
+            <td id="cell23">  </td>
+            <td id="cell24">  </td>
+            <td id="cell25">  </td>
+            <td id="cell26">  </td>
+            <td id="cell27">  </td>
+        </tr>
+        <tr>
+            <td id="cell28">  </td>
+            <td id="cell29">  </td>
+            <td id="cell30">  </td>
+            <td id="cell31">  </td>
+            <td id="cell32">  </td>
+            <td id="cell33">  </td>
+            <td id="cell34">  </td>
+            <td id="cell35">  </td>
+            <td id="cell36">  </td>
+        </tr>
+        <tr>
+            <td id="cell37">  </td>
+            <td id="cell38">  </td>
+            <td id="cell39">  </td>
+            <td id="cell40">  </td>
+            <td id="cell41">  </td>
+            <td id="cell42">  </td>
+            <td id="cell43">  </td>
+            <td id="cell44">  </td>
+            <td id="cell45">  </td>
+        </tr>
+        <tr>
+            <td id="cell46">  </td>
+            <td id="cell47">  </td>
+            <td id="cell48">  </td>
+            <td id="cell49">  </td>
+            <td id="cell50">  </td>
+            <td id="cell51">  </td>
+            <td id="cell52">  </td>
+            <td id="cell53">  </td>
+            <td id="cell54">  </td>
+        </tr>
+        <tr>
+            <td id="cell55">  </td>
+            <td id="cell56">  </td>
+            <td id="cell57">  </td>
+            <td id="cell58">  </td>
+            <td id="cell59">  </td>
+            <td id="cell60">  </td>
+            <td id="cell61">  </td>
+            <td id="cell62">  </td>
+            <td id="cell63">  </td>
+        </tr>
+        <tr>
+            <td id="cell64">  </td>
+            <td id="cell65">  </td>
+            <td id="cell66">  </td>
+            <td id="cell67">  </td>
+            <td id="cell68">  </td>
+            <td id="cell69">  </td>
+            <td id="cell70">  </td>
+            <td id="cell71">  </td>
+            <td id="cell72">  </td>
+        </tr>
+        <tr>
+            <td id="cell73">  </td>
+            <td id="cell74">  </td>
+            <td id="cell75">  </td>
+            <td id="cell76">  </td>
+            <td id="cell77">  </td>
+            <td id="cell78">  </td>
+            <td id="cell79">  </td>
+            <td id="cell80">  </td>
+            <td id="cell81">  </td>
+        </tr>
+    </table>
+
+
+    <button id="btnSolve" class="btn btn-primary">Solve</button>
+
+    <table>
+        <tr>
+            <td id="Outcell1">  </td>
+            <td id="Outcell2">  </td>
+            <td id="Outcell3">  </td>
+            <td id="Outcell4">  </td>
+            <td id="Outcell5">  </td>
+            <td id="Outcell6">  </td>
+            <td id="Outcell7">  </td>
+            <td id="Outcell8">  </td>
+            <td id="Outcell9">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell10">  </td>
+            <td id="Outcell11">  </td>
+            <td id="Outcell12">  </td>
+            <td id="Outcell13">  </td>
+            <td id="Outcell14">  </td>
+            <td id="Outcell15">  </td>
+            <td id="Outcell16">  </td>
+            <td id="Outcell17">  </td>
+            <td id="Outcell18">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell19">  </td>
+            <td id="Outcell20">  </td>
+            <td id="Outcell21">  </td>
+            <td id="Outcell22">  </td>
+            <td id="Outcell23">  </td>
+            <td id="Outcell24">  </td>
+            <td id="Outcell25">  </td>
+            <td id="Outcell26">  </td>
+            <td id="Outcell27">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell28">  </td>
+            <td id="Outcell29">  </td>
+            <td id="Outcell30">  </td>
+            <td id="Outcell31">  </td>
+            <td id="Outcell32">  </td>
+            <td id="Outcell33">  </td>
+            <td id="Outcell34">  </td>
+            <td id="Outcell35">  </td>
+            <td id="Outcell36">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell37">  </td>
+            <td id="Outcell38">  </td>
+            <td id="Outcell39">  </td>
+            <td id="Outcell40">  </td>
+            <td id="Outcell41">  </td>
+            <td id="Outcell42">  </td>
+            <td id="Outcell43">  </td>
+            <td id="Outcell44">  </td>
+            <td id="Outcell45">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell46">  </td>
+            <td id="Outcell47">  </td>
+            <td id="Outcell48">  </td>
+            <td id="Outcell49">  </td>
+            <td id="Outcell50">  </td>
+            <td id="Outcell51">  </td>
+            <td id="Outcell52">  </td>
+            <td id="Outcell53">  </td>
+            <td id="Outcell54">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell55">  </td>
+            <td id="Outcell56">  </td>
+            <td id="Outcell57">  </td>
+            <td id="Outcell58">  </td>
+            <td id="Outcell59">  </td>
+            <td id="Outcell60">  </td>
+            <td id="Outcell61">  </td>
+            <td id="Outcell62">  </td>
+            <td id="Outcell63">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell64">  </td>
+            <td id="Outcell65">  </td>
+            <td id="Outcell66">  </td>
+            <td id="Outcell67">  </td>
+            <td id="Outcell68">  </td>
+            <td id="Outcell69">  </td>
+            <td id="Outcell70">  </td>
+            <td id="Outcell71">  </td>
+            <td id="Outcell72">  </td>
+        </tr>
+        <tr>
+            <td id="Outcell73">  </td>
+            <td id="Outcell74">  </td>
+            <td id="Outcell75">  </td>
+            <td id="Outcell76">  </td>
+            <td id="Outcell77">  </td>
+            <td id="Outcell78">  </td>
+            <td id="Outcell79">  </td>
+            <td id="Outcell80">  </td>
+            <td id="Outcell81">  </td>
+        </tr>
+    </table>
+    <p id="time"></p>
+    <div id="loading"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#loading").hide();
+        // fill initial string data onload of page
+        $.ajax({
+            url: '@Url.Action("InitialBoard", "Home")',
+            type: "GET",
+            contentType: "application/json",
+            dataType: "json",            
+            success: function (data) {              
+               //fill data in grid as per input
+                for(var i=1; i <= 81 ; i++)
+                {
+                    if (data[i-1] != 0) {
+                        document.getElementById("cell" + i).innerHTML = data[i - 1];
+                    }
+                }                       
+            },
+
+            error: function (e) {  
+                $("#loading").hide();
+                alert("Fail");
+            }
+
+        });
+    });
+
+    //checks for finaal result on click of solve button
+    $("#btnSolve").click(function () {
+        $("#loading").show();
+        // fill initial string data onload of page
+        $.ajax({
+            url: '@Url.Action("Result","Home")',
+            type: "GET",
+            start_time: new Date().getTime(),
+            contentType: "application/json",
+            dataType: "json",
+            success: function (data) {                
+                for(var i=1; i <= 81 ; i++)
+                {                  
+                  document.getElementById("Outcell" + i).innerHTML = data[i - 1];
+                }               
+            },
+            error: function (e) {                
+                alert("Fail");
+            },
+            complete: function (data) {
+                //gets total time taken to execute this
+                var t=((new Date().getTime() - this.start_time)/100+ ' seconds');
+                document.getElementById("time").innerHTML ="total time taken is  " + t;
+                $("#loading").hide();
+            }
+           
+        });
+    });
+</script>
